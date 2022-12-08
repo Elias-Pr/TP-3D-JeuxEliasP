@@ -2,8 +2,8 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMotor))]
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
+  
   [SerializeField] 
   private float speed;
 
@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
   
 
   public float JumPower;
+  public float DashPower;
   public Rigidbody Rigidbody;
+  public GroundDetection GroundDetection;
+  public bool DashOnCooldown = false;
   
 
   private void Start()
@@ -19,7 +22,7 @@ public class PlayerController : MonoBehaviour
     motor = GetComponent<PlayerMotor>();
   }
 
-  private void Update()
+  private void Update() 
   {
     float xMov = Input.GetAxisRaw(("Horizontal"));
     float zMov = Input.GetAxisRaw(("Vertical"));
@@ -31,9 +34,20 @@ public class PlayerController : MonoBehaviour
 
     motor.Move(velocity);
     
-    if(Input.GetButtonDown("Jump"))
+    if (Input.GetKeyDown(KeyCode.E) && !DashOnCooldown) {
+      Rigidbody.AddForce(transform.forward * DashPower);
+      DashOnCooldown = true;
+      Invoke(nameof(DashOnFalse), 3f);
+    }
+    
+    if(Input.GetButtonDown("Jump") && GroundDetection.IsCollided)
     {
-      Rigidbody.AddForce(Vector3.up*JumPower);
+      Rigidbody.AddForce(transform.up*JumPower);
     }
   }
+
+  private void DashOnFalse() {
+    DashOnCooldown = false;
+  }
+  
 }
