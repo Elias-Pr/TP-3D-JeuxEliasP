@@ -1,49 +1,32 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
   
-  [SerializeField] 
-  private float speed;
-
-  private PlayerMotor motor;
+  [SerializeField] private float speed;
+  [SerializeField] private float jumpPower;
+  [SerializeField] private float dashPower;
   
-
-  public float JumPower;
-  public float DashPower;
   public Rigidbody Rigidbody;
   public GroundDetection GroundDetection;
-  public bool DashOnCooldown = false;
-  
+  public bool DashOnCooldown;
 
-  private void Start()
-  {
-    motor = GetComponent<PlayerMotor>();
-  }
-
-  private void Update() 
-  {
-    float xMov = Input.GetAxisRaw(("Horizontal"));
-    float zMov = Input.GetAxisRaw(("Vertical"));
-
-    Vector3 moveHorizontal = transform.right * xMov;
-    Vector3 moveVertical = transform.forward * zMov;
-
-    Vector3 velocity = (moveHorizontal + moveVertical).normalized * speed;
-
-    motor.Move(velocity);
-    
+  private void Update() {
     if (Input.GetKeyDown(KeyCode.E) && !DashOnCooldown) {
-      Rigidbody.AddForce(transform.forward * DashPower);
+      Rigidbody.AddForce(transform.forward * dashPower);
       DashOnCooldown = true;
       Invoke(nameof(DashOnFalse), 3f);
     }
-    
-    if(Input.GetButtonDown("Jump") && GroundDetection.IsCollided)
-    {
-      Rigidbody.AddForce(transform.up*JumPower);
+    if(Input.GetButtonDown("Jump") && GroundDetection.IsCollided) {
+      Rigidbody.AddForce(transform.up * jumpPower);
     }
+  }
+
+  private void FixedUpdate() {
+    float xMov = Input.GetAxisRaw(("Horizontal"));
+    float zMov = Input.GetAxisRaw(("Vertical"));
+    Vector3 velocity = transform.TransformDirection(new Vector3(xMov, 0, zMov).normalized) * (speed * Time.fixedDeltaTime);
+    Rigidbody.velocity = new Vector3(velocity.x, Rigidbody.velocity.y, velocity.z);
   }
 
   private void DashOnFalse() {

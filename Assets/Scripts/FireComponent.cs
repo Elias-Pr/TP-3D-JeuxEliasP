@@ -9,12 +9,20 @@ public class FireComponent : MonoBehaviour {
     public Transform GunOut;
 
     public int FirePower;
+    
+    public bool FireOnCooldown = false;
 
     private void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        
+        if (Input.GetButtonDown("Fire1") && !FireOnCooldown) {
             GameObject ammoShot = Instantiate(bullet, GunOut.position, Quaternion.identity);
             ammoShot.GetComponent<Rigidbody>().AddForce(GunOut.forward * FirePower, ForceMode.Impulse);
+            FireOnCooldown = true;
+            Invoke(nameof(FireOnFalse), 4f);
         }
     }
    
+    private void FireOnFalse() {
+        FireOnCooldown = false;
+    }
 }

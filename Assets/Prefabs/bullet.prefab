@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1952654349715486433}
   m_Layer: 8
   m_Name: bullet
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01462865e312459479e23895ebd71a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyDelay: 10
+  DestroyDelay: 4
   TagDelay: 0.5
   bullet: {fileID: 9097155248228903949}
 --- !u!64 &1952654349715486433
