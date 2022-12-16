@@ -11,7 +11,11 @@ public class PlayerController : MonoBehaviour {
   public GroundDetection GroundDetection;
   public bool DashOnCooldown;
 
-  private void Update() {
+  
+
+  
+
+    private void Update() {
     if (Input.GetKeyDown(KeyCode.E) && !DashOnCooldown) {
       Rigidbody.AddForce(transform.forward * dashPower);
       DashOnCooldown = true;
@@ -20,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     if(Input.GetButtonDown("Jump") && GroundDetection.IsCollided) {
       Rigidbody.AddForce(transform.up * jumpPower);
     }
+    
   }
 
   private void FixedUpdate() {
