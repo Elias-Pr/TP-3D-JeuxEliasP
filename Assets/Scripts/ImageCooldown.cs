@@ -6,7 +6,7 @@ public class ImageCooldown : MonoBehaviour
 {
     public Image dashicon;
     public float cooldown = 4f;
-    public bool DashOnCooldown;
+    public bool DashOnCooldown = false;
     public KeyCode TheKey;
     
     public 
@@ -19,7 +19,7 @@ public class ImageCooldown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(TheKey))
+        if (Input.GetKeyDown(TheKey) && !DashOnCooldown)
         {
             DashOnCooldown = true;
             dashicon.fillAmount = 0;
