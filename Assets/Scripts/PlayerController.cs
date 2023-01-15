@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour {
   
   [SerializeField] private float speed;
@@ -19,8 +20,11 @@ public class PlayerController : MonoBehaviour {
     if (Input.GetKeyDown(KeyCode.E) && !DashOnCooldown) {
       Rigidbody.AddForce(transform.forward * dashPower);
       DashOnCooldown = true;
-      Invoke(nameof(DashOnFalse), 3f);
+      Invoke(nameof(DashOnFalse), 4f);
     }
+
+    
+    
     if(Input.GetButtonDown("Jump") && GroundDetection.IsCollided) {
       Rigidbody.AddForce(transform.up * jumpPower);
     }
