@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
   
@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour {
       DashOnCooldown = true;
       Invoke(nameof(DashOnFalse), 4f);
     }
+    
+    if (Input.GetKeyDown(KeyCode.Escape)){
+      Invoke(nameof(mainMenu), 0f);
+    }
 
     
     
@@ -41,5 +45,11 @@ public class PlayerController : MonoBehaviour {
   private void DashOnFalse() {
     DashOnCooldown = false;
   }
+  
+  
+  public void mainMenu() {
+    SceneManager.LoadScene("GameMenu");
+  }
+
   
 }

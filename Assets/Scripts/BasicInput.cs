@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+
 namespace GameLoopEtHierarchie.Components {
     [Serializable]
     public class AxisEvent : UnityEvent<float> {}
@@ -14,6 +15,7 @@ namespace GameLoopEtHierarchie.Components {
         public AxisEvent Vertical;
         public UnityEvent LeftClickDown;
         public UnityEvent RightClickDown;
+        
     
         private void Update() {
             MouseX.Invoke(Input.GetAxis("Mouse X"));
@@ -27,6 +29,6 @@ namespace GameLoopEtHierarchie.Components {
                 RightClickDown.Invoke();
             }
         }
-
+        
     }
 }
