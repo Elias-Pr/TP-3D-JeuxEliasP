@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -14,7 +15,14 @@ public class CameraRotation : MonoBehaviour {
     [Tooltip("Limits vertical camera rotation. Prevents the flipping that happens when rotation goes above 90.")]
     [Range(0f, 90f)][SerializeField] float xRotationLimit;
     //[Range(0, 90f)] [SerializeField] float xRotationLimit;
-    
+
+    private void Start()
+    {
+        Cursor.visible = false;
+
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update() {
         
         Vector3 rotation = new Vector3();

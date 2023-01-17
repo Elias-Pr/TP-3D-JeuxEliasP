@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour {
     }
     
     if (Input.GetKeyDown(KeyCode.Escape)){
+      
+      Cursor.visible = true;
+      Cursor.lockState = CursorLockMode.None;
       Invoke(nameof(mainMenu), 0f);
     }
 
