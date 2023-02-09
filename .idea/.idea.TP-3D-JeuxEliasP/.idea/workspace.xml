@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e645917-0464-4afc-a128-fd347a5ee4ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mobile.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/mobile.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/statique.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/statique.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameEnd.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameEnd.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraRotation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Plateform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Plateform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Win.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Win.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/menuPlay.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/menuPlay.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +94,8 @@
       <workItem from="1673888047781" duration="330000" />
       <workItem from="1673946269493" duration="795000" />
       <workItem from="1673951393663" duration="2407000" />
+      <workItem from="1674831614751" duration="235000" />
+      <workItem from="1674832428731" duration="663000" />
     </task>
     <servers />
   </component>
