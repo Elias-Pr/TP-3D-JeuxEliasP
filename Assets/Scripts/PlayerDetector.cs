@@ -10,7 +10,7 @@ public class PlayerDetector : MonoBehaviour
         {
             col.transform.parent = transform;
         }
-        Debug.Log("Player Collider enter" + col.gameObject.name);
+        //Debug.Log("Player Collider enter" + col.gameObject.name);
     }
     
     private void OnTriggerExit(Collider col) {
@@ -18,6 +18,6 @@ public class PlayerDetector : MonoBehaviour
         {
             col.transform.parent = null;
         }
-        Debug.Log("Player Collider exit" + col.gameObject.name);
+        //Debug.Log("Player Collider exit" + col.gameObject.name);
     }
 }

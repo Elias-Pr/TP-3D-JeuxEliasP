@@ -15,7 +15,7 @@ public class GroundDetection : MonoBehaviour {
         {
             IsCollided = false;
         }
-        Debug.Log("Ground Collider exit" + other.gameObject.name);
+        //Debug.Log("Ground Collider exit" + other.gameObject.name);
     }
 
     private void OnTriggerStay(Collider other) {
@@ -23,7 +23,7 @@ public class GroundDetection : MonoBehaviour {
         {
             IsCollided = true;
         }
-        Debug.Log("Ground Collider enter" + other.gameObject.name);
+        //Debug.Log("Ground Collider enter" + other.gameObject.name);
     }
     
 }
