@@ -9,7 +9,7 @@ public class PlayerPose : MonoBehaviour
     private GameMaster gm;
     private void Start()
     {
-        gm = GameObject.FindGameObjectsWithTag("GM").GetComponent<GameMaster>();
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
     }
 

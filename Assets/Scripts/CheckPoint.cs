@@ -9,7 +9,7 @@ public class CheckPoint : MonoBehaviour
 
     private void Start()
     {
-        gm = GameObject.FindGameObjectsWithTag("GM").GetComponent<GameMaster>();
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
 
     private void OnTriggerEnter(Collider other)
