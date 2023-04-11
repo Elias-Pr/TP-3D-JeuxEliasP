@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 2488494}
   - component: {fileID: 2488497}
   - component: {fileID: 2488498}
+  - component: {fileID: 2488499}
   m_Layer: 8
   m_Name: Playermodel
   m_TagString: Player
@@ -154,7 +155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2488488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -286,6 +287,18 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2917728d030fbe41b4ea74721176786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2488499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4dc20367b52f24c8beb5ce5c257654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &38622659 stripped
@@ -4487,7 +4500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1af17aede906f479a9d8143c26ec4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastCheckPointPos: {x: 0, y: 0, z: 0}
+  lastCheckPointPos: {x: 0, y: 8, z: 0}
 --- !u!4 &1929836796
 Transform:
   m_ObjectHideFlags: 0
