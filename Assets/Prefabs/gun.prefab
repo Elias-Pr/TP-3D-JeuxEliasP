@@ -111,9 +111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29faacd3012828e43a1dc748e1705277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 9097155248228903949, guid: edd9546bc93de8746849dfc0004be523, type: 3}
+  bullet: {fileID: 7743450999368800246, guid: 422986aa0130638468f5392556dd3a28, type: 3}
   GunOut: {fileID: 7649613924048489594}
   FirePower: 8
+  fire: {fileID: 0}
+  cooldown: 4
+  FireOnCooldown: 0
 --- !u!1 &6678116264227712536
 GameObject:
   m_ObjectHideFlags: 0
