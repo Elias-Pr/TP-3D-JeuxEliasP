@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 9097155248228903945}
   - component: {fileID: 9097155248228903950}
   - component: {fileID: -4286415458589505469}
-  - component: {fileID: 1952654349715486433}
   - component: {fileID: -4658209000488367573}
+  - component: {fileID: 1952654349715486433}
   m_Layer: 8
   m_Name: bulletv2
   m_TagString: Ground
@@ -102,6 +102,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-4658209000488367573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9097155248228903949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6004d8a0c6aba1499601c495121df25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyDelay: 4
+  TagDelay: 0.5
+  bullet: {fileID: 9097155248228903949}
 --- !u!64 &1952654349715486433
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -116,18 +131,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &-4658209000488367573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9097155248228903949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6004d8a0c6aba1499601c495121df25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyDelay: 4
-  TagDelay: 0.3
-  bullet: {fileID: 0}

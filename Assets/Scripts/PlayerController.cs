@@ -23,14 +23,7 @@ public class PlayerController : MonoBehaviour {
             DashOnCooldown = true;
             Invoke(nameof(DashOnFalse), 4f);
         }
-        
-        if (Input.GetButtonDown("Fire2"))
-        {
-            Vector3 cameraRotation = GameObject.Find("Camera").transform.forward;
-            Rigidbody.AddForce(-cameraRotation * recoilPower,ForceMode.Impulse);
-            Debug.Log(cameraRotation);
-        }
-    
+
         if (Input.GetKeyDown(KeyCode.Escape)){
       
             Cursor.visible = true;
