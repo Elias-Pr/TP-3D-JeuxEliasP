@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
+
+    public AudioClip clipToPlayEnd;
+    
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -13,6 +16,7 @@ public class Win : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("GameEnd");
+            AudioManager.Instance.ChangeAudioClip(clipToPlayEnd);
         }
            
     }

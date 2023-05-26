@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ButtonPlay : MonoBehaviour
 {
+    public AudioClip clipToPlayGame;
     public void PlayButton()
     {
         SceneManager.LoadScene("Game");
+        AudioManager.Instance.ChangeAudioClip(clipToPlayGame);
     }
     
     public void doExitGame() {

@@ -13,23 +13,26 @@ public class PlayerController : MonoBehaviour {
     public GroundDetection GroundDetection;
     public bool DashOnCooldown;
 
+    public AudioClip clipToPlayMenu;
+
   
 
   
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.E) && !DashOnCooldown) {
-            Rigidbody.AddForce(transform.forward * dashPower);
+        /*if (Input.GetKeyDown(KeyCode.E) && !DashOnCooldown) {
+            Rigidbody.AddForce(transform.forward * dashPower, ForceMode.Force);
             DashOnCooldown = true;
             Invoke(nameof(DashOnFalse), 4f);
-        }
+        }*/
 
-        if (Input.GetKeyDown(KeyCode.Escape)){
+        /* if (Input.GetKeyDown(KeyCode.Escape)){
       
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            Destroy(AudioManager.Instance.gameObject);
             Invoke(nameof(mainMenu), 0f);
-        }
+        } */
 
     
     
