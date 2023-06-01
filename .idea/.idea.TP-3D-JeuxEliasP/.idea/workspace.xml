@@ -6,59 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="2e645917-0464-4afc-a128-fd347a5ee4ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/dark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/gun.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/hologramBlue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/hologramBlue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/hologramRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/hologramRed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/matCheckpoint.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/matCheckpoint.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mobile.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/mobile.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/statique.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/statique.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Example scenes/Materials/Sand.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Example scenes/Materials/Sand.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Example scenes/outpost on desert.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Example scenes/outpost on desert.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/base color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/base color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/blue color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/blue color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/coffee color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/coffee color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/dark color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/dark color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/iron man color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/Palletes/iron man color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/blue emission.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/blue emission.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/comuter_wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/comuter_wall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/lattice floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/lattice floor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/lattice.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/lattice.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_bush.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_bush.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_leaves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_leaves.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_root.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/nature_root.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/projector_warning.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/projector_warning.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/screen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/screen.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/white emision.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/white emision.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/window.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Materials/window.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Models/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Models/Materials/No Name.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Models/Materials/base color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Models/Materials/base color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Models/Materials/hologram.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sci-Fi Styled Modular Pack/Models/Materials/hologram.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Jupiter_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Jupiter_2k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Jupiter_Lod.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Jupiter_Lod.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Mars_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Mars_2k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Mars_Lod.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Mars_Lod.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Saturn_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Saturn_2k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Saturn_Lod.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Saturn_Lod.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Venus_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Venus_2k.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Venus_Lod.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Planets of the Solar System 3D/Materials/URP_Venus_Lod.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameEnd.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameEnd.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraRotation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Win.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Win.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/animations/blackhole.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/animations/blackhole.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/anim/animDecor.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/anim/animDecor.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -199,6 +163,7 @@
       <workItem from="1684928819275" duration="152000" />
       <workItem from="1684928982511" duration="4542000" />
       <workItem from="1685114613295" duration="1101000" />
+      <workItem from="1685529340483" duration="2175000" />
     </task>
     <servers />
   </component>

@@ -18,9 +18,9 @@ public class CameraRotation : MonoBehaviour {
 
     private void Start()
     {
-        Cursor.visible = true;
+        Cursor.visible = false;
 
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update() {

@@ -26,13 +26,13 @@ public class PlayerController : MonoBehaviour {
             Invoke(nameof(DashOnFalse), 4f);
         }*/
 
-        /* if (Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.Escape)){
       
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Destroy(AudioManager.Instance.gameObject);
             Invoke(nameof(mainMenu), 0f);
-        } */
+        }
 
     
     
