@@ -38,6 +38,9 @@ public class PlayerController : MonoBehaviour {
     
         if(Input.GetButtonDown("Jump") && GroundDetection.IsCollided) {
             Rigidbody.AddForce(transform.up * jumpPower);
+            
+            AchievementController.Instance.
+            
         }
     
     }
