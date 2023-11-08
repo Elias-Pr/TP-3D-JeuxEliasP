@@ -1,4 +1,6 @@
 using System;
+using Achievement;
+using Achievment;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,9 +17,9 @@ public class PlayerController : MonoBehaviour {
 
     public AudioClip clipToPlayMenu;
 
-  
 
-  
+    public static Action onJump;
+
 
     private void Update() {
         /*if (Input.GetKeyDown(KeyCode.E) && !DashOnCooldown) {
@@ -38,12 +40,10 @@ public class PlayerController : MonoBehaviour {
     
         if(Input.GetButtonDown("Jump") && GroundDetection.IsCollided) {
             Rigidbody.AddForce(transform.up * jumpPower);
-            
-            AchievementController.Instance.PlayerJumped();
-            
 
+            onJump?.Invoke();
         }
-    
+
     }
 
     private void FixedUpdate() {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Win : MonoBehaviour
 {
 
+    public static Action playerWin;
+    
     public AudioClip clipToPlayEnd;
     
     void OnCollisionEnter(Collision other)
@@ -17,6 +20,9 @@ public class Win : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("GameEnd");
             AudioManager.Instance.ChangeAudioClip(clipToPlayEnd);
+            
+            playerWin.Invoke();
+            
         }
            
     }

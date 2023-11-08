@@ -16,6 +16,9 @@ public class FireComponent : MonoBehaviour {
     public float cooldownTwo = 8f;
     public bool FireOnCooldown = false;
     public bool FireOnCooldownTwo = false;
+    
+    public static Action onBlue;
+    public static Action onRed;
 
     private void Update() {
         
@@ -24,6 +27,7 @@ public class FireComponent : MonoBehaviour {
             ammoShot.GetComponent<Rigidbody>().AddForce(GunOut.forward * FirePower, ForceMode.Impulse);
             FireOnCooldown = true;
             Invoke(nameof(FireOnFalse), cooldown);
+            onBlue.Invoke();
         }
         
         if (Input.GetButtonDown("Fire2") && !FireOnCooldownTwo) {
@@ -31,6 +35,7 @@ public class FireComponent : MonoBehaviour {
             ammoShot.GetComponent<Rigidbody>().AddForce(GunOut.forward * FirePower, ForceMode.Impulse);
             FireOnCooldownTwo = true;
             Invoke(nameof(FireOnFalseTwo), cooldownTwo);
+            onRed.Invoke();
         }
     }
    
