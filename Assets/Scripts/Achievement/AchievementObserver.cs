@@ -7,32 +7,41 @@ namespace Achievement
 {
     [ExecuteAlways]
     public class AchievementObserver : Achievment.MonoBehaviourSingleton<AchievementObserver>
-    {
-        public static readonly string JumpCount = "JumpCount";
-        public static readonly string Red = "Red";
-        public static readonly string Blue = "Blue";
-        public static readonly string Death = "Death";
-        public static readonly string WinGame = "Win";
+    {        
+        private const string StrJumpCount = "JumpCount";
+        private const string StrRed = "Red";
+        private const string StrBlue = "Blue";
+        private const string StrDeath = "Death";
+        private const string StrWinGame = "Win";
         
-        
-        
-        private int _jumpCount = 0;
-        
-        private int _red = 0;
-        private int _blue = 0;
-
-        private int _death = 0;
-
-        private int _win = 0;
-
-        private void Awake()
+        public int JumpCount
         {
-            _jumpCount = PlayerPrefs.GetInt(JumpCount, 0);
-            _red = PlayerPrefs.GetInt(Red, 0);
-            _blue = PlayerPrefs.GetInt(Blue, 0);
-            _death = PlayerPrefs.GetInt(Death, 0);
-            _win = PlayerPrefs.GetInt(WinGame, 0);
+            get => PlayerPrefs.GetInt(StrJumpCount);
+            set => PlayerPrefs.SetInt(StrJumpCount, value);
         }
+
+        public int Red
+        {
+            get => PlayerPrefs.GetInt(StrRed);
+            set => PlayerPrefs.SetInt(StrRed, value);
+        }
+
+        public int Blue
+        {
+            get => PlayerPrefs.GetInt(StrBlue);
+            set => PlayerPrefs.SetInt(StrBlue, value);        }
+
+        public int Death
+        {
+            get => PlayerPrefs.GetInt(StrDeath);
+            set => PlayerPrefs.SetInt(StrDeath, value);        }
+
+        public int Win
+        {
+            get => PlayerPrefs.GetInt(StrWinGame);
+            set => PlayerPrefs.SetInt(StrWinGame, value);        }
+
+
 
         private void Update()
         {
@@ -48,7 +57,7 @@ namespace Achievement
             FireComponent.onBlue += BlueCreation;
             FireComponent.onRed += RedCreation;
             Kill.playerDeath += FirstDeath;
-            Win.playerWin += FirstWin;
+            WinCondition.playerWin += FirstWin;
 
             
         }
@@ -59,7 +68,7 @@ namespace Achievement
             FireComponent.onBlue -= BlueCreation;
             FireComponent.onRed -= RedCreation;
             Kill.playerDeath -= FirstDeath;
-            Win.playerWin -= FirstWin;
+            WinCondition.playerWin -= FirstWin;
             
             
 
@@ -67,16 +76,15 @@ namespace Achievement
         
         public void PlayerJumped()
         {
-            _jumpCount++;
-            PlayerPrefs.SetInt(JumpCount, _jumpCount);
+            JumpCount++;
             PlayerPrefs.Save();
 
-            if (_jumpCount == 5)
+            if (JumpCount == 5)
             {
                 Debug.Log("Mario Like");
             }
             
-            if (_jumpCount == 10) 
+            if (JumpCount == 10) 
             {
                 Debug.Log("SUPER Mario Like");
             }
@@ -84,55 +92,52 @@ namespace Achievement
         
         public void BlueCreation()
         {
-            _blue++;
-            PlayerPrefs.SetInt(Blue, _blue);
+            Blue++;
             PlayerPrefs.Save();
             
-            if (_blue == 1)
+            if (Blue == 1)
             {
                 Debug.Log("This is not Portal");
             }
 
-            if (_blue == 5)
+            if (Blue == 5)
             {
-                Debug.Log("You have 4s ...");
+                Debug.Log("BUILD A BRIDGE !");
             }
         }
         
         public void RedCreation()
         {
-            _red++;
-            PlayerPrefs.SetInt(Red, _red);
+            Red++;
             PlayerPrefs.Save();
 
-            if (_blue == 1)
+            if (Red == 1)
             {
                 Debug.Log("I SAID : This is not Portal");
             }
             
-            if (_red == 5)
+            if (Red == 3)
             {
-                Debug.Log("boiing");
+                Debug.Log("I knew you would like it");
             }
         }
 
         public void FirstDeath()
         {
-            _death++;
-            PlayerPrefs.SetInt(Death, _death);
+            Death++;
             PlayerPrefs.Save();
 
-            if (_death == 1)
+            if (Death == 1)
             {
                 Debug.Log("Here we go again");
             }
 
-            if (_death == 5)
+            if (Death == 5)
             {
                 Debug.Log("Having trouble ?");
             }
             
-            if (_death == 10)
+            if (Death == 10)
             {
                 Debug.Log("Cmoooooooooon my grandma could do this !");
             }
@@ -140,15 +145,16 @@ namespace Achievement
         
         public void FirstWin()
         {
-            _win++;
-            PlayerPrefs.SetInt(WinGame, _win);
+            Win++;
             PlayerPrefs.Save();
-            
-            Debug.Log("I like Interstellar, I dunno if it was clear");
-        }
 
+            if (Win == 1)
+            {
+                Debug.Log("I like Interstellar, I dunno if it was clear");
+            }
+        }
         
-        public static void ResetAll()
+        public  void ResetAll()
         {
 
             Debug.Log("ResetAll called");
@@ -156,11 +162,11 @@ namespace Achievement
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
 
-            Debug.Log("JumpCount: " + PlayerPrefs.GetInt(JumpCount));
-            Debug.Log("Red: " + PlayerPrefs.GetInt(Red));
-            Debug.Log("Blue: " + PlayerPrefs.GetInt(Blue));
-            Debug.Log("Death: " + PlayerPrefs.GetInt(Death));
-            Debug.Log("WinGame: " + PlayerPrefs.GetInt(WinGame));
+            Debug.Log("JumpCount: " + JumpCount);
+            Debug.Log("Red: " + Red);
+            Debug.Log("Blue: " + Blue);
+            Debug.Log("Death: " + Death);
+            Debug.Log("WinGame: " + Win);
 
         }
     }

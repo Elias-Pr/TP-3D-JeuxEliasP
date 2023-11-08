@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2e645917-0464-4afc-a128-fd347a5ee4ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievment.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievment/AchievementController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievment/AchievementController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievment/MonoBehaviourSingleton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievment/MonoBehaviourSingleton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BasicInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BasicInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Win.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Win.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievement/AchievementObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievement/AchievementObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Win.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WinCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Win.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WinCondition.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +159,7 @@
       <workItem from="1698417331848" duration="1142000" />
       <workItem from="1699299061814" duration="3562000" />
       <workItem from="1699383221372" duration="12853000" />
+      <workItem from="1699450654519" duration="4279000" />
     </task>
     <servers />
   </component>
