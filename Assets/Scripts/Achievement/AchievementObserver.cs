@@ -13,6 +13,12 @@ namespace Achievement
         private const string StrBlue = "Blue";
         private const string StrDeath = "Death";
         private const string StrWinGame = "Win";
+        private const string StrBounce = "Bounce";
+        private const string StrLaunch = "GameLaunch";
+        private const string StrCheckPoint = "CheckPoint";
+        private const string StrPlatform = "Platform";
+        private const string StrFireCooldown = "Platform";
+        
         
         public int JumpCount
         {
@@ -41,7 +47,35 @@ namespace Achievement
             get => PlayerPrefs.GetInt(StrWinGame);
             set => PlayerPrefs.SetInt(StrWinGame, value);        }
 
+        public int BounceCount
+        {
+            get => PlayerPrefs.GetInt(StrBounce);
+            set => PlayerPrefs.SetInt(StrBounce, value);
+        }
+        
+        public int Launch
+        {
+            get => PlayerPrefs.GetInt(StrLaunch);
+            set => PlayerPrefs.SetInt(StrLaunch, value);
+        }
+        
+        public int CheckpointCount
+        {
+            get => PlayerPrefs.GetInt(StrCheckPoint);
+            set => PlayerPrefs.SetInt(StrCheckPoint, value);
+        }
 
+        public int PlatformCollide
+        {
+            get => PlayerPrefs.GetInt(StrPlatform);
+            set => PlayerPrefs.SetInt(StrPlatform, value);
+        }
+        
+        public int FailedCount
+        {
+            get => PlayerPrefs.GetInt(StrFireCooldown);
+            set => PlayerPrefs.SetInt(StrFireCooldown, value);
+        }
 
         private void Update()
         {
@@ -58,8 +92,12 @@ namespace Achievement
             FireComponent.onRed += RedCreation;
             Kill.playerDeath += FirstDeath;
             WinCondition.playerWin += FirstWin;
+            BouncyPlatform.playerBounce += PlayerBounced;
+            ButtonPlay.launch += FirstLaunch;
+            CheckPoint.checkPoint += CheckPointActive;
+            AchievementCorridor.plateformTranslation += PlatformCollision;
+            FireComponent.fireCooldown += FireFailed;
 
-            
         }
 
         private void OnDestroy()
@@ -69,9 +107,11 @@ namespace Achievement
             FireComponent.onRed -= RedCreation;
             Kill.playerDeath -= FirstDeath;
             WinCondition.playerWin -= FirstWin;
-            
-            
-
+            BouncyPlatform.playerBounce -= PlayerBounced;
+            ButtonPlay.launch -= FirstLaunch;
+            CheckPoint.checkPoint -= CheckPointActive;
+            AchievementCorridor.plateformTranslation -= PlatformCollision;
+            FireComponent.fireCooldown -= FireFailed;
         }
         
         public void PlayerJumped()
@@ -153,20 +193,86 @@ namespace Achievement
                 Debug.Log("I like Interstellar, I dunno if it was clear");
             }
         }
+
+        public void PlayerBounced()
+        {
+            BounceCount++;
+            PlayerPrefs.Save();
+
+            if (BounceCount == 1)
+            {
+                Debug.Log("Boooooiiiiiiiing");
+            }
+            if (BounceCount == 2)
+            {
+                Debug.Log("Bowiiiiing");
+            }
+            if (BounceCount == 3)
+            {
+                Debug.Log("I like this feature");
+            }
+            if (BounceCount == 4)
+            {
+                Debug.Log("So glad they putted it in the game");
+            }
+            
+        }
+        
+        public void FirstLaunch()
+        {
+            Launch++;
+            PlayerPrefs.Save();
+
+            if (Launch == 1)
+            {
+                Debug.Log("The beginning of a new adventure !");
+            }
+        }
+
+        public void CheckPointActive()
+        {
+            CheckpointCount++;
+            PlayerPrefs.Save();
+
+            if (CheckpointCount == 1)
+            {
+                Debug.Log("Progression saved !");
+            }
+            if (CheckpointCount == 2)
+            {
+                Debug.Log("Bonfire lit !");
+            }
+        }
+        
+        public void PlatformCollision()
+        {
+            PlatformCollide++;
+            PlayerPrefs.Save();
+
+            if (PlatformCollide == 1)
+            {
+                Debug.Log("Watch your feet !");
+            }
+        }
+        
+        public void FireFailed()
+        {
+            FailedCount++;
+            PlayerPrefs.Save();
+
+            if (FailedCount == 1)
+            {
+                Debug.Log("Need a magzine ? Too bad !");
+            }
+        }
         
         public  void ResetAll()
         {
 
-            Debug.Log("ResetAll called");
+            Debug.Log("All Achievements are reset");
     
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
-
-            Debug.Log("JumpCount: " + JumpCount);
-            Debug.Log("Red: " + Red);
-            Debug.Log("Blue: " + Blue);
-            Debug.Log("Death: " + Death);
-            Debug.Log("WinGame: " + Win);
 
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,11 @@ using UnityEngine.UIElements;
 
 public class TranslatePlateform : MonoBehaviour
 {
-
     public bool TranslationReverse;
     public float ReverseDelay = 5f;
+
+    
+    
     void Update()
     {
         
@@ -26,6 +29,8 @@ public class TranslatePlateform : MonoBehaviour
             Invoke(nameof(CounterReverse),ReverseDelay);
         }
     }
+
+    
 
     private void Reverse()
     {

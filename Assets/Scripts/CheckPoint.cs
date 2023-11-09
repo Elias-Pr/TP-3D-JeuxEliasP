@@ -7,6 +7,8 @@ public class CheckPoint : MonoBehaviour
 {
     private GameMaster gm;
 
+    public static Action checkPoint;
+
     private void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
@@ -17,6 +19,9 @@ public class CheckPoint : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             gm.lastCheckPointPos = transform.position;
+            Debug.Log("CheckPoint !");
+            
+            checkPoint.Invoke();
         }
     }
 }

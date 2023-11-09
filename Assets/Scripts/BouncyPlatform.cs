@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class BouncyPlatform : Plateform
 {
+    public static Action playerBounce;
+    
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag != "Player")
+        if (!other.gameObject.CompareTag("Player"))
         {
             return;
         }
         other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 400);
-        Debug.Log("camarche");
+        
+        playerBounce.Invoke();
     }
     
 }

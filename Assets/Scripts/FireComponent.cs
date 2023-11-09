@@ -20,6 +20,8 @@ public class FireComponent : MonoBehaviour {
     public static Action onBlue;
     public static Action onRed;
 
+    public static Action fireCooldown;
+
     private void Update() {
         
         if (Input.GetButtonDown("Fire1") && !FireOnCooldown) {
@@ -37,6 +39,16 @@ public class FireComponent : MonoBehaviour {
             Invoke(nameof(FireOnFalseTwo), cooldownTwo);
             onRed.Invoke();
         }
+        
+        if (Input.GetButtonDown("Fire1") && FireOnCooldown) {
+            fireCooldown.Invoke();
+        }
+        
+        if (Input.GetButtonDown("Fire2") && FireOnCooldownTwo) {
+            fireCooldown.Invoke();
+        }
+        
+        
     }
    
     private void FireOnFalse() {
