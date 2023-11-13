@@ -11,7 +11,7 @@ public class AchievementCorridor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("yes");
+            Debug.Log("Watch your feet !");
             plateformTranslation.Invoke();
         }
     }
