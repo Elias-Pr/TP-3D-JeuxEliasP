@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e645917-0464-4afc-a128-fd347a5ee4ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievement/AchievementCorridor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievement/AchievementCorridor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievement/AchievementObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievement/AchievementObserver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +161,7 @@
       <workItem from="1699519319769" duration="8928000" />
       <workItem from="1699706685179" duration="4045000" />
       <workItem from="1699808495749" duration="3084000" />
+      <workItem from="1699881456260" duration="1705000" />
     </task>
     <servers />
   </component>
