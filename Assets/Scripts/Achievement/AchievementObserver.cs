@@ -203,15 +203,15 @@ namespace Achievement
             {
                 Debug.Log("Boooooiiiiiiiing");
             }
-            if (BounceCount == 2)
+            if (BounceCount == 4)
             {
                 Debug.Log("Bowiiiiing");
             }
-            if (BounceCount == 3)
+            if (BounceCount == 6)
             {
                 Debug.Log("I like this feature");
             }
-            if (BounceCount == 4)
+            if (BounceCount == 8)
             {
                 Debug.Log("So glad they putted it in the game");
             }

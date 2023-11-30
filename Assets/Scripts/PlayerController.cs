@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape)){
       
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            
             Destroy(AudioManager.Instance.gameObject);
             Invoke(nameof(mainMenu), 0f);
         }

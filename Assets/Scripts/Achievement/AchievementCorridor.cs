@@ -1,18 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AchievementCorridor : MonoBehaviour
+namespace Achievement
 {
-    public static Action plateformTranslation;
-    
-    private void OnTriggerEnter(Collider other)
+    public class AchievementCorridor : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        public static Action plateformTranslation;
+    
+        private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("yes");
-            plateformTranslation.Invoke();
+            if (other.CompareTag("Player"))
+            {
+                plateformTranslation.Invoke();
+            }
         }
     }
 }
