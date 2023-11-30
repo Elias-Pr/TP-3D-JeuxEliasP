@@ -2,6 +2,7 @@ using System;
 using GameLoopEtHierarchie.Components;
 using UnityEngine;
 using UnityEngine.ProBuilder;
+using UnityEngine.UI;
 
 namespace Achievement
 {
@@ -18,6 +19,9 @@ namespace Achievement
         private const string StrCheckPoint = "CheckPoint";
         private const string StrPlatform = "Platform";
         private const string StrFireCooldown = "Platform";
+        
+        
+        public Text achievementText;
         
         
         public int JumpCount
@@ -121,12 +125,13 @@ namespace Achievement
 
             if (JumpCount == 5)
             {
-                Debug.Log("Mario Like");
+                UpdateAchievementText("Mario Like");
+                
             }
             
             if (JumpCount == 10) 
             {
-                Debug.Log("SUPER Mario Like");
+                UpdateAchievementText("SUPER Mario Like");
             }
         }
         
@@ -137,12 +142,12 @@ namespace Achievement
             
             if (Blue == 1)
             {
-                Debug.Log("This is not Portal");
+                UpdateAchievementText("This is not Portal");
             }
 
             if (Blue == 5)
             {
-                Debug.Log("BUILD A BRIDGE !");
+                UpdateAchievementText("BUILD A BRIDGE !");
             }
         }
         
@@ -153,12 +158,12 @@ namespace Achievement
 
             if (Red == 1)
             {
-                Debug.Log("I SAID : This is not Portal");
+                UpdateAchievementText("I SAID : This is not Portal");
             }
             
             if (Red == 3)
             {
-                Debug.Log("I knew you would like it");
+                UpdateAchievementText("I knew you would like it");
             }
         }
 
@@ -169,17 +174,17 @@ namespace Achievement
 
             if (Death == 1)
             {
-                Debug.Log("Here we go again");
+                UpdateAchievementText("Here we go again");
             }
 
             if (Death == 5)
             {
-                Debug.Log("Having trouble ?");
+                UpdateAchievementText("Having trouble ?");
             }
             
             if (Death == 10)
             {
-                Debug.Log("Cmoooooooooon my grandma could do this !");
+                UpdateAchievementText("Cmoooooooooon my grandma could do this !");
             }
         }
         
@@ -190,7 +195,7 @@ namespace Achievement
 
             if (Win == 1)
             {
-                Debug.Log("I like Interstellar, I dunno if it was clear");
+                UpdateAchievementText("I like Interstellar, I dunno if it was clear");
             }
         }
 
@@ -201,19 +206,19 @@ namespace Achievement
 
             if (BounceCount == 1)
             {
-                Debug.Log("Boooooiiiiiiiing");
+                UpdateAchievementText("Boooooiiiiiiiing");
             }
             if (BounceCount == 4)
             {
-                Debug.Log("Bowiiiiing");
+                UpdateAchievementText("Bowiiiiing");
             }
             if (BounceCount == 6)
             {
-                Debug.Log("I like this feature");
+                UpdateAchievementText("I like this feature");
             }
             if (BounceCount == 8)
             {
-                Debug.Log("So glad they putted it in the game");
+                UpdateAchievementText("So glad they putted it in the game");
             }
             
         }
@@ -225,7 +230,7 @@ namespace Achievement
 
             if (Launch == 1)
             {
-                Debug.Log("The beginning of a new adventure !");
+                UpdateAchievementText("The beginning of a new adventure !");
             }
         }
 
@@ -236,11 +241,11 @@ namespace Achievement
 
             if (CheckpointCount == 1)
             {
-                Debug.Log("Progression saved !");
+                UpdateAchievementText("Progression saved !");
             }
             if (CheckpointCount == 2)
             {
-                Debug.Log("Bonfire lit !");
+                UpdateAchievementText("Bonfire lit !");
             }
         }
         
@@ -251,7 +256,7 @@ namespace Achievement
 
             if (PlatformCollide == 1)
             {
-                Debug.Log("Watch your feet !");
+                UpdateAchievementText("Watch your feet !");
             }
         }
         
@@ -262,7 +267,7 @@ namespace Achievement
 
             if (FailedCount == 1)
             {
-                Debug.Log("Need a magzine ? Too bad !");
+                UpdateAchievementText("Need a magazine ? Too bad !");
             }
         }
         
@@ -274,6 +279,19 @@ namespace Achievement
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
 
+        }
+        
+        private void UpdateAchievementText(string achievementName)
+        {
+            // Check if the Text element is available
+            if (achievementText != null)
+            {
+                achievementText.text = achievementName;
+            }
+            else
+            {
+                Debug.LogWarning("Text element is not assigned for achievement display.");
+            }
         }
     }
 }
