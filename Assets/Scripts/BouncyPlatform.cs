@@ -15,7 +15,17 @@ public class BouncyPlatform : Plateform
         }
         other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 400);
         
-        playerBounce.Invoke();
+        
     }
     
+	private void OnCollisionExit(Collision other){
+        
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+	    playerBounce.Invoke();
+
+	}
+
 }

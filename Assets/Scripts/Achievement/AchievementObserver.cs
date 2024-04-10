@@ -208,15 +208,15 @@ namespace Achievement
             {
                 UpdateAchievementText("Boooooiiiiiiiing");
             }
-            if (BounceCount == 2)
+            if (BounceCount == 4)
             {
                 UpdateAchievementText("Bowiiiiing");
             }
-            if (BounceCount == 3)
+            if (BounceCount == 6)
             {
                 UpdateAchievementText("I like this feature");
             }
-            if (BounceCount == 4)
+            if (BounceCount == 8)
             {
                 UpdateAchievementText("So glad they putted it in the game");
             }
