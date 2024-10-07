@@ -18,7 +18,15 @@ public class ButtonPlay : MonoBehaviour
         launch.Invoke();
     }
     
-    public void doExitGame() {
+    public void CreditButton()
+    {
+        SceneManager.LoadScene("GameEnd");
+        AudioManager.Instance.ChangeAudioClip(clipToPlayGame);
+        
+        launch.Invoke();
+    }
+    
+    public void DoExitGame() {
         Application.Quit();
         
     }
