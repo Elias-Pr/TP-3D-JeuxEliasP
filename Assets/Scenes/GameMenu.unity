@@ -1662,7 +1662,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clipToPlayGame: {fileID: 8300000, guid: aa16cd31a592729418558702f236cb8a, type: 3}
-  settings: {fileID: 1899231997}
 --- !u!1 &959553843
 GameObject:
   m_ObjectHideFlags: 0

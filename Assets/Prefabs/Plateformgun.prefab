@@ -122,12 +122,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 9097155248228903949, guid: edd9546bc93de8746849dfc0004be523, type: 3}
   bulletTwo: {fileID: 9097155248228903949, guid: 48184cd24753fbb41bb469f131de976b, type: 3}
-  gunOut: {fileID: 2549948791437010875}
-  firePower: 0
+  GunOut: {fileID: 2549948791437010875}
+  FirePower: 5
   cooldown: 4
   cooldownTwo: 10
-  fireOnCooldown: 0
-  fireOnCooldownTwo: 0
+  FireOnCooldown: 0
+  FireOnCooldownTwo: 0
 --- !u!1 &6314951686285321813
 GameObject:
   m_ObjectHideFlags: 0
