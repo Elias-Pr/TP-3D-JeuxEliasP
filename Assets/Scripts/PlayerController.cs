@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float jumpPower;
     [SerializeField] private float recoilPower;
     [SerializeField] private float dashPower;
+    
+    public static int moneyCount;
 
     // Reference to the Joystick script for mobile controls
     public Joystick joystick;
