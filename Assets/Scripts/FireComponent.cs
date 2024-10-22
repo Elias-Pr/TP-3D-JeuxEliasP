@@ -27,6 +27,11 @@ public class FireComponent : MonoBehaviour {
     }
 
     private void Update() {
+        if (GameMaster.IsMenuOpen)
+        {
+            return;
+        }
+        
         if (Input.GetButtonDown("Fire1") && !FireOnCooldown) {
             FireBlueBullet();
         }

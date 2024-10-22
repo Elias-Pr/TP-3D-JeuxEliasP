@@ -15,6 +15,8 @@ public class CameraRotation : MonoBehaviour {
 
     private float xRotationValue = 0f;
 
+    
+
     private void Start() {
         // Hide the cursor and lock it to the center of the screen
         Cursor.visible = false;
@@ -22,6 +24,12 @@ public class CameraRotation : MonoBehaviour {
     }
 
     void Update() {
+
+        if (GameMaster.IsMenuOpen)
+        {
+            return;
+        }
+        
         Vector3 rotation = new Vector3();
 
         // Handle mouse input
