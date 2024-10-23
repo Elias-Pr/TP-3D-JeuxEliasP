@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Prefabs
+namespace UI_Marchand
 {
     public class InventoryManager : MonoBehaviour
     {
