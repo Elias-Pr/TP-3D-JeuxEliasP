@@ -1,20 +1,52 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DropArea : MonoBehaviour, IDropHandler
+namespace UI_Marchand
 {
-    public void OnDrop(PointerEventData eventData)
+    public class DropArea : MonoBehaviour, IDropHandler
     {
-        GameObject droppedItem = eventData.pointerDrag; // The item being dragged
-        if (droppedItem != null)
+        public InventoryManager inventoryManager; // Reference to the InventoryManager
+
+        private void Start()
         {
-            DraggableItem draggableItem = droppedItem.GetComponent<DraggableItem>();
-            if (draggableItem != null)
+            // Find and assign InventoryManager if it's not assigned manually
+            if (inventoryManager == null)
             {
-                // Set the item's parent to this panel and reset its position
-                droppedItem.transform.SetParent(transform, false);
-                Debug.Log("Item dropped in the new area");
+                inventoryManager = FindObjectOfType<InventoryManager>();
+            }
+        }
+
+        public void OnDrop(PointerEventData eventData)
+        {
+            GameObject droppedItem = eventData.pointerDrag; // The item being dragged
+            if (droppedItem != null)
+            {
+                DraggableItem draggableItem = droppedItem.GetComponent<DraggableItem>();
+                if (draggableItem != null && inventoryManager != null) // Check if inventoryManager is not null
+                {
+                    // Get the item information from the InventoryManager
+                    InventoryItem item = inventoryManager.GetItemBySlot(droppedItem);
+
+                    if (item != null && PlayerController.moneyCount >= item.quantity) // Check if player has enough money
+                    {
+                        // Deduct the cost and update the UI
+                        PlayerController.moneyCount -= item.quantity;
+                        inventoryManager.UpdateMoneyUI();
+
+                        // Set the item's parent to this panel (inventory) and reset its position
+                        droppedItem.transform.SetParent(transform, false);
+                        Debug.Log("Item successfully purchased and dropped in the inventory");
+
+                        // Optionally, update inventory states (e.g., mark item as bought)
+                        inventoryManager.MarkItemAsBought(item);
+                    }
+                    else
+                    {
+                        Debug.Log("Not enough money to buy this item!");
+                    }
+                }
             }
         }
     }
+
 }

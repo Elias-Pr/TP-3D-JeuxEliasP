@@ -22,6 +22,7 @@ public class Money : MonoBehaviour
         {
             PlayerController.moneyCount++;
             Debug.Log(PlayerController.moneyCount);
+            Debug.Log(PlayerController.moneyCount);
             Destroy(this.gameObject);
         }
     }
