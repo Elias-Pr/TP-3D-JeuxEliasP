@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e645917-0464-4afc-a128-fd347a5ee4ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/C.Christodoulou - A Glacier Eventually Farts (And Dont You Listen to the Song of Life)  RoR2(2020).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/C.Christodoulou - A Glacier Eventually Farts (And Dont You Listen to the Song of Life)  RoR2(2020).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou -  …con lentitud poderosa  Risk of Rain 2 (2020).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou -  …con lentitud poderosa  Risk of Rain 2 (2020).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou - Once in a Lullaby  ROR2 Survivors of the Void (2022).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou - Once in a Lullaby  ROR2 Survivors of the Void (2022).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dark Souls III OST Main Theme.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dark Souls III OST Main Theme.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozymandias - As Read by Bryan Cranston Kinetic Typography [Breaking Bad].mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozymandias - As Read by Bryan Cranston Kinetic Typography [Breaking Bad].mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Paysan_Breton_Skylleur_Remix.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Paysan_Breton_Skylleur_Remix.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Slot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/InventoryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TranslatePlateform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/charlieMusic/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/charlieMusic/MonoBehaviourSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.17/Editor/BurstAotCompiler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -172,6 +192,8 @@
       <workItem from="1729786436002" duration="2614000" />
       <workItem from="1729798440450" duration="2393000" />
       <workItem from="1729803977791" duration="1794000" />
+      <workItem from="1729866816766" duration="4000" />
+      <workItem from="1729867199986" duration="2597000" />
     </task>
     <servers />
   </component>
@@ -198,6 +220,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

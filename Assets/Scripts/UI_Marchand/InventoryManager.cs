@@ -80,7 +80,6 @@ namespace UI_Marchand
             }
         }
 
-        // Méthode pour vendre les objets depuis l'inventaire
         public void SellSelectedItems()
         {
             int totalSaleValue = CalculateTotalSelectedItemsCost(); // Every item gives 1 money per quantity
@@ -105,7 +104,6 @@ namespace UI_Marchand
             selectedItems.Clear();  // Nettoie la liste des objets sélectionnés
         }
 
-        // Calculate the total cost of the selected items
         private int CalculateTotalSelectedItemsCost()
         {
             int totalCost = 0;
@@ -118,7 +116,6 @@ namespace UI_Marchand
             return totalCost;
         }
 
-        // Update the UI to display the player's current money
         public void UpdateMoneyUI()
         {
             if (moneyText != null)
