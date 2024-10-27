@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1692
     height: 854.6667
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 59
+  controlID: 105
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 60
+  controlID: 106
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 109
+  controlID: 107
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -1102,9 +1102,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e760000
-      m_LastClickedID: 30302
-      m_ExpandedIDs: c6cdfefffcfaffff66630000dc6400004666000074660000826600004c6b000056720000607500004c760000
+      m_SelectedIDs: 32820000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 80d3ffff2ed5ffffb8d7ffff68d8ffff10d9ffffc0d9fffffcfaffff0085000080870000a2870000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.033514008, y: -0.12896793, z: 0.0044245613, w: -0.99109083}
     speed: 2
-    m_Value: {x: -0.033513397, y: -0.12896557, z: 0.0044244807, w: -0.9910728}
+    m_Value: {x: -0.03351401, y: -0.12896793, z: 0.0044245617, w: -0.99109083}
   m_Size:
     m_Target: 466.9648
     speed: 2
@@ -2853,7 +2853,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -2861,30 +2861,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\aa_ENI_Travail\Annee3\TP-3D-JeuxEliasP
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 93}
-    m_SelectedIDs: 8c810000
-    m_LastClickedID: 33164
-    m_ExpandedIDs: 000000002e81000030810000328100003481000036810000388100003a8100009c8100003a9b040000ca9a3b
+    scrollPos: {x: 0, y: 137}
+    m_SelectedIDs: b0810000
+    m_LastClickedID: 33200
+    m_ExpandedIDs: 000000004e81000050810000528100005481000056810000588100005a8100005c8100005e81000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GemsAndCoins
-      m_OriginalName: GemsAndCoins
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 301876
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -2898,7 +2898,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e81000030810000328100003481000036810000388100003a810000
+    m_ExpandedIDs: 000000004e81000050810000528100005481000056810000588100005a8100005c8100005e810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2950,7 +2950,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 89}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
