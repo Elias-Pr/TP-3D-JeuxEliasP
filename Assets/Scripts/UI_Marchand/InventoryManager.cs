@@ -7,12 +7,12 @@ namespace UI_Marchand
 {
     public class InventoryManager : MonoBehaviour
     {
-        public GameObject inventorySlotPrefab;  // Prefab pour les slots d'inventaire
-        public Transform inventoryGrid;         // Le parent contenant la grille d'inventaire (Main Panel)
-        public Transform merchantGrid;          // Le parent secondaire (Other panel where items are initially)
-        public TMP_Text moneyText;              // Text UI for showing player's money
+        public GameObject inventorySlotPrefab;
+        public Transform inventoryGrid; // Main Panel (Inventory)
+        public Transform merchantGrid;  // Merchant Panel
+        public TMP_Text moneyText;
         
-        private List<GameObject> inventorySlots = new List<GameObject>(); // Liste des slots d'inventaire
+        private List<GameObject> inventorySlots = new List<GameObject>();
         private List<InventoryItem> inventoryItems = new List<InventoryItem>();
         private List<InventoryItem> selectedItems = new List<InventoryItem>();
 
@@ -24,96 +24,89 @@ namespace UI_Marchand
             UpdateMoneyUI();
         }
 
-        // Method to add an item to the inventory
         public void AddItemToInventory(string itemName, int quantity)
         {
             InventoryItem newItem = new InventoryItem(itemName, quantity);
             inventoryItems.Add(newItem);
-    
-            GameObject slot = Instantiate(inventorySlotPrefab, merchantGrid); // Add to the other panel (merchant)
-            inventorySlots.Add(slot); // Add the slot to the list of slots
-    
+
+            GameObject slot = Instantiate(inventorySlotPrefab, merchantGrid); // Add to Merchant Panel
+            inventorySlots.Add(slot);
+
             Button button = slot.GetComponentInChildren<Button>();
             button.GetComponentInChildren<TMP_Text>().text = newItem.itemName;
-
-            // Add the drag-and-drop handler to the slot
             slot.AddComponent<DraggableItem>();
 
-            // Add a listener to the button for item selection
-            button.onClick.AddListener(() => MoveSelectedItemsToMainInventory());
+            button.onClick.AddListener(() => HandleItemTransaction(slot));
 
             Toggle toggle = slot.GetComponentInChildren<Toggle>();
             toggle.onValueChanged.AddListener(isOn => ToggleItemSelection(newItem, isOn));
         }
 
-        // Method to move selected items from the secondary panel to the main inventory
-        public void MoveSelectedItemsToMainInventory()
+        public void HandleItemTransaction(GameObject slot)
         {
-            int totalCost = CalculateTotalSelectedItemsCost();
+            bool isInMerchant = slot.transform.parent == merchantGrid;
+            InventoryItem item = GetItemBySlot(slot);
 
-            if (PlayerController.moneyCount >= totalCost)
+            if (item != null)
             {
-                PlayerController.moneyCount -= totalCost;
-                UpdateMoneyUI();
-                
-                // Pour chaque slot dans l'inventaire
-                foreach (GameObject slot in inventorySlots)
+                if (isInMerchant)
                 {
-                    Toggle toggle = slot.GetComponentInChildren<Toggle>();
-                    if (toggle != null && toggle.isOn)
+                    if (selectedItems.Contains(item))
                     {
-                        // Vérifie si le slot est dans le merchant panel et le déplace vers le panel principal
-                        if (slot.transform.parent == merchantGrid)
-                        {
-                            slot.transform.SetParent(inventoryGrid, false);  // Déplace vers le panneau principal (main inventory)
-                            Debug.Log("Slot déplacé vers le panneau principal (inventaire)");
-                        }
-
-                        // Réinitialise le Toggle après le déplacement
-                        toggle.isOn = false;
+                        BuyItem(item);
+                    }
+                }
+                else
+                {
+                    if (selectedItems.Contains(item))
+                    {
+                        SellItems();
                     }
                 }
             }
+        }
+
+        private void BuyItem(InventoryItem item)
+        {
+            int totalCost = selectedItems.Count; 
+            if (PlayerController.moneyCount >= totalCost)
+            {
+                PlayerController.moneyCount -= totalCost; 
+                UpdateMoneyUI();
+
+                foreach (var selectedItem in selectedItems)
+                {
+                    var slot = GetSlotByItem(selectedItem);
+                    if (slot != null)
+                    {
+                        slot.transform.SetParent(inventoryGrid, false);
+                        Debug.Log($"{selectedItem.itemName} purchased and moved to inventory.");
+                    }
+                }
+                selectedItems.Clear();
+                ResetToggles();
+            }
             else
             {
-                Debug.Log("Pas assez d'argent pour acheter ces objets !");
+                Debug.Log("Not enough money to buy selected items!");
             }
         }
 
-        public void SellSelectedItems()
+        private void SellItems()
         {
-            int totalSaleValue = CalculateTotalSelectedItemsCost(); // Every item gives 1 money per quantity
-
-            // Ajoute l'argent du joueur basé sur les objets sélectionnés
-            PlayerController.moneyCount += totalSaleValue;
-            UpdateMoneyUI();
-
-            // Déplacer les objets vendus du panneau d'inventaire vers le panneau marchand
-            foreach (GameObject slot in inventorySlots)
-            {
-                Toggle toggle = slot.GetComponentInChildren<Toggle>();
-                if (toggle != null && toggle.isOn && slot.transform.parent == inventoryGrid)
-                {
-                    slot.transform.SetParent(merchantGrid, false);  // Déplace vers le panneau marchand
-                    Debug.Log("Slot déplacé vers le panneau marchand (vente)");
-
-                    toggle.isOn = false;  // Désactive le Toggle après la vente
-                }
-            }
-            
-            selectedItems.Clear();  // Nettoie la liste des objets sélectionnés
-        }
-
-        private int CalculateTotalSelectedItemsCost()
-        {
-            int totalCost = 0;
-
             foreach (var item in selectedItems)
             {
-                totalCost += item.quantity;  // Assume each item costs 1 money per quantity
+                var slot = GetSlotByItem(item);
+                if (slot != null)
+                {
+                    PlayerController.moneyCount++; 
+                    UpdateMoneyUI();
+                    slot.transform.SetParent(merchantGrid, false); 
+                    Debug.Log($"{item.itemName} sold and moved to merchant.");
+                }
             }
-
-            return totalCost;
+            selectedItems.Clear(); 
+            ResetToggles(); 
         }
 
         public void UpdateMoneyUI()
@@ -124,21 +117,23 @@ namespace UI_Marchand
             }
         }
 
-        // Toggle item selection
         public void ToggleItemSelection(InventoryItem item, bool isSelected)
         {
             if (isSelected)
             {
-                selectedItems.Add(item);
-                Debug.Log("Objet sélectionné : " + item.itemName);
+                if (!selectedItems.Contains(item))
+                {
+                    selectedItems.Add(item);
+                    Debug.Log("Selected item: " + item.itemName);
+                }
             }
             else
             {
                 selectedItems.Remove(item);
-                Debug.Log("Objet désélectionné : " + item.itemName);
+                Debug.Log("Deselected item: " + item.itemName);
             }
         }
-        
+
         public InventoryItem GetItemBySlot(GameObject slot)
         {
             int index = inventorySlots.IndexOf(slot);
@@ -149,18 +144,25 @@ namespace UI_Marchand
             return null;
         }
 
-        // Mark the item as bought (optional, to prevent re-buying)
-        public void MarkItemAsBought(InventoryItem item)
+        public GameObject GetSlotByItem(InventoryItem item)
         {
-            // This is optional logic to handle the item after it's been bought.
-            Debug.Log("Item " + item.itemName + " has been bought.");
+            int index = inventoryItems.IndexOf(item);
+            if (index >= 0 && index < inventorySlots.Count)
+            {
+                return inventorySlots[index];
+            }
+            return null;
         }
 
-        public void PerformActionOnSelectedItems()
+        private void ResetToggles()
         {
-            foreach (var item in selectedItems)
+            foreach (var slot in inventorySlots)
             {
-                Debug.Log("Action sur l'objet : " + item.itemName);
+                Toggle toggle = slot.GetComponentInChildren<Toggle>();
+                if (toggle != null)
+                {
+                    toggle.isOn = false; 
+                }
             }
             selectedItems.Clear();
         }

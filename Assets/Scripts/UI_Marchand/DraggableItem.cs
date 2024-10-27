@@ -5,7 +5,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    private Transform originalParent;
+    public Transform OriginalParent { get; private set; }
 
     private void Awake()
     {
@@ -13,35 +13,30 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    // Called when dragging begins
     public void OnBeginDrag(PointerEventData eventData)
     {
-        originalParent = transform.parent; // Store the original parent
-        transform.SetParent(transform.root); // Move the item to the root to avoid masking issues
-        canvasGroup.blocksRaycasts = false; // Disable raycasting so it doesn't interfere with other UI
-        canvasGroup.alpha = 0.6f; // Make the item slightly transparent while dragging
+        OriginalParent = transform.parent;
+        transform.SetParent(transform.root);
+        canvasGroup.blocksRaycasts = false;
+        canvasGroup.alpha = 0.6f;
     }
 
-    // Called when the item is being dragged
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / GetCanvasScaleFactor(); // Move the item
+        rectTransform.anchoredPosition += eventData.delta / GetCanvasScaleFactor();
     }
 
-    // Called when dragging ends
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.blocksRaycasts = true; // Enable raycasting again
-        canvasGroup.alpha = 1.0f; // Reset transparency
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.alpha = 1.0f;
 
-        // If the item is not dropped on a valid slot, return it to its original position
         if (transform.parent == transform.root)
         {
-            transform.SetParent(originalParent);
+            transform.SetParent(OriginalParent);
         }
     }
 
-    // Helper function to adjust for Canvas scaling
     private float GetCanvasScaleFactor()
     {
         Canvas canvas = GetComponentInParent<Canvas>();

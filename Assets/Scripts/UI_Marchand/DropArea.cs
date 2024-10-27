@@ -5,11 +5,10 @@ namespace UI_Marchand
 {
     public class DropArea : MonoBehaviour, IDropHandler
     {
-        public InventoryManager inventoryManager; // Reference to the InventoryManager
+        public InventoryManager inventoryManager;
 
         private void Start()
         {
-            // Find and assign InventoryManager if it's not assigned manually
             if (inventoryManager == null)
             {
                 inventoryManager = FindObjectOfType<InventoryManager>();
@@ -18,35 +17,49 @@ namespace UI_Marchand
 
         public void OnDrop(PointerEventData eventData)
         {
-            GameObject droppedItem = eventData.pointerDrag; // The item being dragged
+            GameObject droppedItem = eventData.pointerDrag;
             if (droppedItem != null)
             {
                 DraggableItem draggableItem = droppedItem.GetComponent<DraggableItem>();
-                if (draggableItem != null && inventoryManager != null) // Check if inventoryManager is not null
+                if (draggableItem != null && inventoryManager != null)
                 {
-                    // Get the item information from the InventoryManager
+                    // Check if the item is being moved to a new panel
+                    bool isMovedToDifferentPanel = droppedItem.transform != transform;
                     InventoryItem item = inventoryManager.GetItemBySlot(droppedItem);
 
-                    if (item != null && PlayerController.moneyCount >= item.quantity) // Check if player has enough money
+                    if (isMovedToDifferentPanel && item != null)
                     {
-                        // Deduct the cost and update the UI
-                        PlayerController.moneyCount -= item.quantity;
-                        inventoryManager.UpdateMoneyUI();
-
-                        // Set the item's parent to this panel (inventory) and reset its position
-                        droppedItem.transform.SetParent(transform, false);
-                        Debug.Log("Item successfully purchased and dropped in the inventory");
-
-                        // Optionally, update inventory states (e.g., mark item as bought)
-                        inventoryManager.MarkItemAsBought(item);
+                        // Buying logic if moving from Merchant to Inventory
+                        if (transform == inventoryManager.inventoryGrid && PlayerController.moneyCount > 0)
+                        {
+                            PlayerController.moneyCount--;
+                            inventoryManager.UpdateMoneyUI();
+                            droppedItem.transform.SetParent(inventoryManager.inventoryGrid, false);  // Move to Inventory
+                            Debug.Log($"{item.itemName} purchased and moved to inventory.");
+                        }
+                        // Selling logic if moving from Inventory to Merchant
+                        else if (transform == inventoryManager.merchantGrid)
+                        {
+                            PlayerController.moneyCount++;
+                            inventoryManager.UpdateMoneyUI();
+                            droppedItem.transform.SetParent(inventoryManager.merchantGrid, false);  // Move to Merchant
+                            Debug.Log($"{item.itemName} sold and moved to merchant.");
+                        }
+                        else
+                        {
+                            // Not enough money to buy the item; return to original position
+                            Debug.Log("Not enough money to buy this item!");
+                            droppedItem.transform.SetParent(draggableItem.OriginalParent, false);
+                        }
                     }
                     else
                     {
-                        Debug.Log("Not enough money to buy this item!");
+                        // Dropped in the same panel; reset to original position
+                        droppedItem.transform.SetParent(draggableItem.OriginalParent, false);
+                        Debug.Log("Item dropped in the same panel, no transaction occurred.");
                     }
                 }
             }
         }
     }
-
 }

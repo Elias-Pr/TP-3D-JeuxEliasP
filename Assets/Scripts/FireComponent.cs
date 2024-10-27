@@ -32,6 +32,7 @@ public class FireComponent : MonoBehaviour {
             return;
         }
         
+        /*
         if (Input.GetButtonDown("Fire1") && !FireOnCooldown) {
             FireBlueBullet();
         }
@@ -47,6 +48,7 @@ public class FireComponent : MonoBehaviour {
         if (Input.GetButtonDown("Fire2") && FireOnCooldownTwo) {
             fireCooldown?.Invoke();
         }
+        */
     }
 
     private void OnBlueFireButtonClick() {
@@ -73,8 +75,7 @@ public class FireComponent : MonoBehaviour {
         onBlue?.Invoke();
     }
 
-    private void FireRedBullet()
-    {
+    private void FireRedBullet() {
         GameObject ammoShot = Instantiate(bulletTwo, GunOut.position, Quaternion.identity);
         ammoShot.GetComponent<Rigidbody>().AddForce(GunOut.forward * FirePower, ForceMode.Impulse);
         FireOnCooldownTwo = true;

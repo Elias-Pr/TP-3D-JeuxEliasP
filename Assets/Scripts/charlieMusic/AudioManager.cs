@@ -1,98 +1,129 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class AudioManager : MonoBehaviourSingleton<AudioManager>
+namespace charlieMusic
 {
-    public AudioSource audioSource;
-
-    [Range(0, 1)] public float maximumVolume;
-
-    private AudioClip _pendingAudioClip;
-
-    private void Awake()
+    public class AudioManager : MonoBehaviourSingleton<AudioManager>
     {
-        DontDestroyOnLoad(this.gameObject);
-        audioSource.volume = maximumVolume;
-    }
+            public AudioSource audioSource; // Main audio
+            public AudioSource ambientAudioSource; // Ambient audio
 
-    public void SetAudioSourceVolume(float userMultiplier)
-    {
-        userMultiplier /= 100;
-        audioSource.volume = maximumVolume * userMultiplier;
-    }
+            [Range(0, 1)] public float maximumVolume = 1f;
+            [Range(0, 1)] public float ambientMaximumVolume = 1f;
+            [Range(0, 1)] public float masterVolume = 1f; // Master volume control
 
-    public void PlayClip(AudioClip newClip)
-    {
-        audioSource.clip = newClip;
-        audioSource.Play();
-    }
+            public Slider musicVolumeSlider;    // Slider for main volume
+            public Slider ambientVolumeSlider; // Slider for ambient volume
+            public Slider masterVolumeSlider;  // Slider for master volume
 
-    public void PauseAudio()
-    {
-        audioSource.Pause();
-    }
+            private AudioClip _pendingAudioClip;
 
-    public void ResumeAudio()
-    {
-        audioSource.Play();
-    }
+            private void Awake()
+            {
+                DontDestroyOnLoad(this.gameObject);
+                SetMusicVolume(musicVolumeSlider.value);
+                SetAmbientVolume(ambientVolumeSlider.value);
+                SetMasterVolume(masterVolumeSlider.value);
 
-    public void ChangeAudioClip(AudioClip newClip)
-    {
-        if (newClip == null) {
-            throw new Exception("ERROR : Audio Manager !");
-        }
+                // Add listeners to sliders to update volume dynamically
+                musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
+                ambientVolumeSlider.onValueChanged.AddListener(SetAmbientVolume);
+                masterVolumeSlider.onValueChanged.AddListener(SetMasterVolume);
+            }
 
-        _pendingAudioClip = newClip;
-        StartCoroutine(SwitchAudioClipWithFade());
-    }
+            // Methods for setting volumes
+            public void SetMusicVolume(float userMultiplier)
+            {
+                audioSource.volume = maximumVolume * userMultiplier * masterVolume;
+            }
 
-    public void ChangeAudioClip(string pathToAudioClip)
-    {
-        _pendingAudioClip = Resources.Load<AudioClip>(pathToAudioClip);
-        StartCoroutine(SwitchAudioClipWithFade());
-    }
+            public void SetAmbientVolume(float userMultiplier)
+            {
+                ambientAudioSource.volume = ambientMaximumVolume * userMultiplier * masterVolume;
+            }
 
-    public IEnumerator FadeSound()
-    {
-        const float fadeTime = 1f;
-        float t = 0f;
-        float initialVolume = audioSource.volume;
+            public void SetMasterVolume(float newMasterVolume)
+            {
+                masterVolume = newMasterVolume; // Directly use master slider value
+                SetMusicVolume(musicVolumeSlider.value);     // Apply master to music volume
+                SetAmbientVolume(ambientVolumeSlider.value); // Apply master to ambient volume
+            }
 
-        while (t < 1)
+            public void PlayClip(AudioClip newClip)
         {
-            t += Time.deltaTime / fadeTime;
-            audioSource.volume = Mathf.Lerp(initialVolume, 0.00f, t);
-            yield return null;
+            audioSource.clip = newClip;
+            audioSource.Play();
         }
-    }
 
-    private IEnumerator SwitchAudioClipWithFade()
-    {
-        const float fadeTime = 1f;
-        float t = 0f;
-        float initialVolume = audioSource.volume;
-
-        while (t < 1)
+        public void PauseAudio()
         {
-            t += Time.unscaledDeltaTime / fadeTime;
-            audioSource.volume = Mathf.Lerp(initialVolume, 0.00f, t);
-            yield return null;
+            audioSource.Pause();
         }
 
-        audioSource.Stop();
-        audioSource.clip = _pendingAudioClip;
-        audioSource.Play();
-        t = 0f;
-
-        while (t < 1)
+        public void ResumeAudio()
         {
-            t += Time.unscaledDeltaTime / fadeTime;
-            audioSource.volume = Mathf.Lerp(0.00f, initialVolume, t);
-            yield return null;
+            audioSource.Play();
         }
 
-        _pendingAudioClip = null;
+        public void ChangeAudioClip(AudioClip newClip)
+        {
+            if (newClip == null) {
+                throw new Exception("ERROR: Audio Manager!");
+            }
+
+            _pendingAudioClip = newClip;
+            StartCoroutine(SwitchAudioClipWithFade());
+        }
+
+        public void ChangeAudioClip(string pathToAudioClip)
+        {
+            _pendingAudioClip = Resources.Load<AudioClip>(pathToAudioClip);
+            StartCoroutine(SwitchAudioClipWithFade());
+        }
+
+        public IEnumerator FadeSound()
+        {
+            const float fadeTime = 1f;
+            float t = 0f;
+            float initialVolume = audioSource.volume;
+
+            while (t < 1)
+            {
+                t += Time.deltaTime / fadeTime;
+                audioSource.volume = Mathf.Lerp(initialVolume, 0.00f, t);
+                yield return null;
+            }
+        }
+
+        private IEnumerator SwitchAudioClipWithFade()
+        {
+            const float fadeTime = 1f;
+            float t = 0f;
+            float initialVolume = audioSource.volume;
+
+            while (t < 1)
+            {
+                t += Time.unscaledDeltaTime / fadeTime;
+                audioSource.volume = Mathf.Lerp(initialVolume, 0.00f, t);
+                yield return null;
+            }
+
+            audioSource.Stop();
+            audioSource.clip = _pendingAudioClip;
+            audioSource.Play();
+            t = 0f;
+
+            while (t < 1)
+            {
+                t += Time.unscaledDeltaTime / fadeTime;
+                audioSource.volume = Mathf.Lerp(0.00f, initialVolume, t);
+                yield return null;
+            }
+
+            _pendingAudioClip = null;
+        }
+        
     }
 }

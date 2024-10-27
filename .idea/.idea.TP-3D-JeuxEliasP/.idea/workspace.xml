@@ -7,22 +7,22 @@
     <list default="true" id="2e645917-0464-4afc-a128-fd347a5ee4ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP-3D-JeuxEliasP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/C.Christodoulou - A Glacier Eventually Farts (And Dont You Listen to the Song of Life)  RoR2(2020).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/C.Christodoulou - A Glacier Eventually Farts (And Dont You Listen to the Song of Life)  RoR2(2020).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou -  …con lentitud poderosa  Risk of Rain 2 (2020).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou -  …con lentitud poderosa  Risk of Rain 2 (2020).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou - Once in a Lullaby  ROR2 Survivors of the Void (2022).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chris Christodoulou - Once in a Lullaby  ROR2 Survivors of the Void (2022).mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Souls III OST Main Theme.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dark Souls III OST Main Theme.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozymandias - As Read by Bryan Cranston Kinetic Typography [Breaking Bad].mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozymandias - As Read by Bryan Cranston Kinetic Typography [Breaking Bad].mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Paysan_Breton_Skylleur_Remix.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Paysan_Breton_Skylleur_Remix.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Slot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/Audiowide-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/Audiowide-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/money.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/money.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameEnd.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameEnd.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/DraggableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/DraggableItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/DropArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/DropArea.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Marchand/InventoryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WinCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WinCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/charlieMusic/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/charlieMusic/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/charlieMusic/MonoBehaviourSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/charlieMusic/MonoBehaviourSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -47,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Plateform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerPose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SettingsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TranslatePlateform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/charlieMusic/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/charlieMusic/MonoBehaviourSingleton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,6 +81,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="public Button up;" />
+    </option>
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../TP-3D-JeuxEliasP\Radames-TP3D.exe" />
@@ -194,6 +200,18 @@
       <workItem from="1729803977791" duration="1794000" />
       <workItem from="1729866816766" duration="4000" />
       <workItem from="1729867199986" duration="2597000" />
+      <workItem from="1729896702381" duration="1330000" />
+      <workItem from="1729898098934" duration="2395000" />
+      <workItem from="1729900532103" duration="680000" />
+      <workItem from="1729944014754" duration="5491000" />
+      <workItem from="1729952216765" duration="1229000" />
+      <workItem from="1729976693501" duration="3462000" />
+      <workItem from="1729980208480" duration="1413000" />
+      <workItem from="1729982157533" duration="3284000" />
+      <workItem from="1729986750296" duration="200000" />
+      <workItem from="1729986967483" duration="1497000" />
+      <workItem from="1729989053358" duration="1076000" />
+      <workItem from="1729990165696" duration="541000" />
     </task>
     <servers />
   </component>
@@ -220,7 +238,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
